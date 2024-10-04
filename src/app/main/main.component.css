@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(218, 78, 101);
+}
+main {
+    display: flex;
+    justify-content: space-between;
+}
+aside {
+    width: 20%;
+    background-color: #f13838;
+    padding: 10px;
+}
+section {
+    width: 75%;
+    padding: 10px;
+}
