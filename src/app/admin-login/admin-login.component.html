@@ -2,27 +2,31 @@
 <body>
     <header>
         <h1>Welcome to My Webpage</h1>
-        <p>Introduction and Logo Area</p> 
-        <!-- one way binding-->
+        <p>Introduction and Logo Area</p>  <!-- one way binding-->
 <p> {{firstname}}</p> 
-<p>{{firstname+" hi"+" kaviiiii"}}</p>
-<!--
-string interpolation
--->
+<p>{{firstname+" hi"+" kaviiiii"}}</p>  <!--string interpolation-->
 
-<p [innerText]="title"> </p>
-
-<!--property binding-->
-
+<p [innerText]="title"> </p> <!--property binding-->
 
 <h1> {{addr}}</h1>
-<input type="text" [(ngModel)]="addr">
+<input type="text" [(ngModel)]="addr">  <!--two way binding-->
 
-<!--two way binding-->
+<h1> {{getName()}}</h1>   <!--using function-->
+<p> Multiply of 100 and 80 is:{{100*80}}</p>
+<p> max is {{getMax(10,90)}}</p>
+<p style.color= {{color}}> nithu</p>
+
+<!--Property binding-->
+
+<button [disabled]="isDisabled"> Click me </button>
+
+<!--Event binding -->
+<p>  you have clicked {{clickCount}} times</p>
+<button (click)=" click()" > Click</button>
 
 
 
-    </header>
+</header>
 
 </body>
 
