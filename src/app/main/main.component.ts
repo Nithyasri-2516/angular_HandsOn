@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
+    title="list"
+    movies=["unakum enakum","sachin","kutty","Ghilli","goat"]
 
+  value="student"
+  
+    s=[
+      {name:"nithu", age:"40"},
+      {name:"jemi", age:"90"},
+      {name:"kavi", age:"100"}
+    ]
 }

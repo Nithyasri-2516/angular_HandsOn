@@ -28,9 +28,17 @@ export class AdminLoginComponent {
     click(){
       this.clickCount++;
     }
+  
+    value=''
+    value1=''
+    handleInput(event:any){
+      this.value=(event.target as HTMLInputElement).value;
+    }
+
+onclick(){
+  alert("clicked")
+}
+
 
     
-
-    
-
 }

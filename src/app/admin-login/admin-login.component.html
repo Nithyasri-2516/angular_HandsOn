@@ -23,10 +23,33 @@
 <!--Event binding -->
 <p>  you have clicked {{clickCount}} times</p>
 <button (click)=" click()" > Click</button>
+<br>
 
+with input handling: <input type="text" (input)="handleInput($event)">
+<p>{{value}}</p>
+
+<br> <br>
+<!-- <input type="text"> -->
+click event<button (click)="onclick()">CLICK Me!!!! </button>
+<br>
+double click<button (dblclick)="onclick()">CLICK Me!!!! </button>
+
+<!-- key down,key press, key up, mouse up,over,leave etc.... -->
+
+
+<!-- modules: collection of code 
+ using @ng-module{
+    declaration: [component]
+    imports:[module import eg:FormsModule]
+    providers[services]
+    boostrap [main component eg:app  component]
+
+
+
+    module creation:  ng g m module_name
+ }-->
 
 
 </header>
-
 </body>
 

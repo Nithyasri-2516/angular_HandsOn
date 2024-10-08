@@ -13,24 +13,51 @@
     <!-- Main Section Content -->
     <section>
         <article>
-            <h2>Article 1: Introduction to HTML5</h2>
-            <p>This article explains the basics of HTML5 and why semantic tags are important.</p>
-        </article>
 
-        <article>
-            <h2>Article 2: Understanding Semantic Tags</h2>
-            <p>In this article, we dive deeper into how to structure a webpage using semantic elements.</p>
-        </article>
+ <!--directives-->
+<!-- change in behaviour, appearence and layout
+ 1.component 
+ 2.structural
+ 3.attribute-->
 
-        <article>
-            <h2>Article 3: Understanding styles Tags</h2>
-            <p>In this article, we dive deeper into how to structure a webpage using semantic elements.</p>
-        </article>
-        <article>
-            <h2>Article 4: Understanding script Tags</h2>
-            <p>In this article, we dive deeper into how to structure a webpage using semantic elements.</p>
-        </article>
 
+ <!--structural -->
+<p>{{title}}</p>
+<ul>
+    <li *ngFor="let m of movies">
+        {{m}}
+    </li>   
+</ul>
+ <br>
+<div >
+    <div>
+        {{value}}
+    </div>
+    <div >
+        <table>
+            <thead>
+                <th>s.no</th>
+                <th>name</th>
+                <th> age</th>
+                
+            </thead>
+        <tbody >
+            <tr
+           [ngClass]='{"bg-success":e}'
+                *ngFor="let m of s; let  i=index; let o=odd; let e=even">
+               <td>{{i+1}}</td>
+              <td> {{m.name}}</td>
+               <td>{{m.age}}</td>
+
+            </tr>
+                      </tbody>
+        </table>
+    </div>
+</div> 
+
+
+
+</article>
     </section>
 
 </main>
