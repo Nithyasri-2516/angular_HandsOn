@@ -21,7 +21,8 @@
  3.attribute-->
 
 
- <!--structural -->
+ <!--structural ng-for  used to iterate a array or elements-->
+
 <p>{{title}}</p>
 <ul>
     <li *ngFor="let m of movies">
@@ -43,8 +44,8 @@
             </thead>
         <tbody >
             <tr
-           [ngClass]='{"bg-success":e}'
-                *ngFor="let m of s; let  i=index; let o=odd; let e=even">
+           [ngClass]='{"bg-warning":l}'
+                *ngFor="let m of s; let  i=index; let o=odd; let e=even;let f= first; let l=last">
                <td>{{i+1}}</td>
               <td> {{m.name}}</td>
                <td>{{m.age}}</td>
@@ -54,6 +55,76 @@
         </table>
     </div>
 </div> 
+<!-- ng-switch used to dispaly the elements -->
+<h4> Ng switch example</h4>
+<label for="" > Type any number</label>
+<input type="text" [(ngModel)]="num">
+<div [ngSwitch]="num">
+    <div *ngSwitchCase="1"> One</div>
+    <div *ngSwitchCase="3"> three</div>
+</div>
+<br>
+<!-- ng-if used to show and hide the content -->
+
+ <h4> Ng if example</h4>
+
+     <input type="checkbox" [(ngModel)]="showme">
+
+ <p *ngIf="showme"> checked</p>
+ <p *ngIf="!showme">not checked</p>
+
+
+
+ <input type="checkbox" [(ngModel)]="show">
+ <div *ngIf="show; then ifblock; else elseBlock "></div>
+
+<ng-template #ifblock>
+ <p *ngIf="show"> checked</p>
+</ng-template>
+
+
+<ng-template #elseBlock>
+ <p *ngIf="!show">not checked</p>
+
+</ng-template>
+
+
+<!-- attribute -->
+<!-- ng-class -->
+red<input type="checkbox" [(ngModel)]="event">
+big<input type="checkbox" [(ngModel)]="enableBig">
+<div [ngClass]="{
+    'primary':event,
+    'big': enableBig
+}">       nithyaa 
+
+</div>
+
+<!-- ng-style -->
+
+
+ng-style: <div [ngStyle]="{
+    'color':'red',
+    'font-size':'20px',
+    'font-weight':'bold'
+}"> sample </div>
+
+
+
+<input type="text" [(ngModel)]="enableColor">
+<div [ngStyle]="{
+    'color': enableColor,
+}"> Nithupandu
+</div>
+
+
+<input type="text" [(ngModel)]="enableBGColor">
+<div [ngStyle]="{
+    'backgroundColor': enableBGColor,
+}"> Nithupandu
+</div>
+
+
 
 
 

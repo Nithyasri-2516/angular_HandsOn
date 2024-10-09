@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(218, 78, 101);
+    background-color: rgb(202, 180, 184);
 }
 main {
     display: flex;
@@ -8,10 +8,20 @@ main {
 }
 aside {
     width: 20%;
-    background-color: #f13838;
+    background-color: #e6d6d6;
     padding: 10px;
 }
 section {
     width: 75%;
     padding: 10px;
+}
+
+.primary{
+    color:red;
+    
+}
+
+.big{
+    font-size: 40px;
+
 }
