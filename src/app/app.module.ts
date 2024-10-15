@@ -9,6 +9,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     AdminLoginComponent,
     NavComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

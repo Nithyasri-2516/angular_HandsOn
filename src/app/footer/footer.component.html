@@ -1,5 +1,92 @@
 <body>
     <footer>
         <p>© 2024 My Webpage. All rights reserved.</p>
+
+
+<!-- pipes -->
+
+<!--pipes are a powerful feature used to transform data in templates. They allow you to format, filter, or modify 
+the data displayed to users without changing the original data.
+
+
+Built-in Pipes
+Angular provides several built-in pipes, including:
+
+DatePipe: Formats dates.
+{{ currentDate | date:'fullDate' }}
+
+CurrencyPipe: Formats numbers as currency.
+{{ amount | currency:'USD':'symbol':'1.2-2' }}
+
+DecimalPipe: Formats numbers with decimal points.
+{{ number | number:'1.2-2' }}
+
+PercentPipe: Formats numbers as percentages.
+{{ fraction | percent }}
+
+SlicePipe: Slices an array or string.
+{{ array | slice:1:3 }}
+
+UpperCasePipe / LowerCasePipe: Converts strings to upper or lower case.
+{{ text | uppercase }}
+
+
+ 
+custom pipes: ng generate pipe reverse
+-------------------------------------------------------
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'reverse'
+})
+export class ReversePipe implements PipeTransform {
+  transform(value: string): string {
+    return value.split('').reverse().join('');
+  }
+}
+
+{{ 'hello' | reverse }}
+-->
+<h2> Date pipe example </h2>
+<p>Current Date: {{ currentDate | date }}</p>
+<p>medium Date: {{ currentDate | date: 'medium' }}</p>
+<p>Full Date: {{ currentDate | date: 'fullDate' }}</p>
+<p>Short Date: {{ currentDate | date: 'shortDate' }}</p>
+<p>Custom Format: {{ currentDate | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
+
+
+<h2>Reverse Pipe Example</h2>
+<p>Original: {{ 'hello' }}</p>
+<p>Reversed: {{ 'hello' | reverse }}</p>
+
+<h2>uppercase and LowerCasePipe</h2>
+<p> original: {{message}}</p>
+<p>uppercase: {{message| uppercase}}</p>
+<p> lowercase:{{message|lowercase}}</p>
+
+
+<h2> SlicePipe</h2>
+<p>original: {{message}}</p>
+<p> slice: {{message|slice:1:9}}</p>
+
+<h2> CurrencyPipe</h2>
+<p>original: {{Currency}}</p>
+<p>USD: {{Currency|currency}}</p>
+<p>INR: {{Currency|currency:'INR'}}</p>
+<p> {{Currency|currency:'INR':false}}</p>
+
+<h2> PercentPipe</h2>
+<p>original:{{fraction}}</p>
+<p>percent:{{fraction| percent}}</p>
+
+
+<h2>titlecase pipe</h2>
+<p>original:{{message}}</p>
+<p>title: {{message| titlecase}}</p>
+
+<h2>decimal</h2>
+<p>original:{{deci}}</p>
+<p>modified: {{deci| number:'1.2-3'}}</p>
+
     </footer>
 </body>

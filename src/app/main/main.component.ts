@@ -31,4 +31,20 @@ enableBig=true
 enableColor= "red"
 
 enableBGColor= "blue"
+
+
+showMessage: boolean = true;
+
+toggleMessage() {
+  this.showMessage = !this.showMessage;
+}
+
+
+display: boolean = false;
+
+  toggleDisplay() {
+    this.display = !this.display; 
+  }
+
+
 }

@@ -1,3 +1,4 @@
+
 <body>
     <main>
     <!-- Sidebar Content (Aside) -->
@@ -125,7 +126,26 @@ ng-style: <div [ngStyle]="{
 </div>
 
 
+<!--template is an HTML file that defines the user interface of a component.
+  It combines standard HTML with Angular-specific syntax to enable dynamic 
+ rendering of content, binding data, and handling events. 
+ 
+ 
+1.Display Data: Show values from component properties using interpolation (e.g., {{ value }}).
+2.Bind Events: Respond to user interactions (e.g., clicking a button) with event binding (e.g., (click)="method()").
+3.Use Structural Directives: Control the rendering of elements based on conditions (e.g., *ngIf, *ngFor).-->
 
+
+<input type="button" value="Toggle" (click)="toggleDisplay()">
+<div *ngIf="display; then ifblock; else elseBlock"></div>
+
+<ng-template #ifblock>
+  <p>Checked</p>
+</ng-template>
+
+<ng-template #elseBlock>
+  <p>Not Checked</p>
+</ng-template>
 
 
 </article>
