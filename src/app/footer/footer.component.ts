@@ -12,3 +12,4 @@ export class FooterComponent {
    fraction=6/9;
    deci=2.900;
 }
+
